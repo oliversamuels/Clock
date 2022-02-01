@@ -11,3 +11,15 @@ clock = pygame.time.Clock()
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
+
+def main():
+    run = True
+    while run:
+        for event in pygame.event.get():
+            if event.type ==  pygame.QUIT:
+                run = False
+
+        screen.fill(BLACK)
+        pygame.display.update()
+        clock.tick(EPS)
+    pygame.quit()
