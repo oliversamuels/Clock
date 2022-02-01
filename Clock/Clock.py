@@ -1,6 +1,7 @@
 import pygame
 from math import pi, cos, sin
 import datetime
+from pygame.locals import *
 
 WIDTH, HEIGHT = 800, 800
 
@@ -9,6 +10,7 @@ pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Analog Clock")
 clock = pygame.time.Clock()
+bg = pygame.image.load("bg.jpg")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -56,6 +58,7 @@ def main():
         month_abbr = months_abbr.get(month)
 
         screen.fill(BLACK)
+        screen.blit(bg, (0,0))
         pygame.draw.circle(screen, WHITE, center, clock_radius - 10, 10)
         pygame.draw.circle(screen, WHITE, center, 12)
 
