@@ -12,6 +12,8 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 
+EPS = 60
+
 def main():
     run = True
     while run:
@@ -23,3 +25,6 @@ def main():
         pygame.display.update()
         clock.tick(EPS)
     pygame.quit()
+
+
+main()
